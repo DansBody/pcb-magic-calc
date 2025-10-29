@@ -14,6 +14,11 @@ export interface CostBreakdown {
   subtotal: number;
   totalPerM2: number;
   totalCost: number;
+  // 额外的详细信息字段
+  formulaAdderAmount: number; // 公式加价金额
+  formulaAdderPercentage: number; // 公式加价百分比
+  mstcStandardPricePerM2: number; // MSTC 标准平米价(RMB)
+  currency: string; // 币别
 }
 
 function parseAdder(value: string | number, basePrice: number): number {
@@ -72,6 +77,30 @@ export function calculateCost(specs: PCBSpecs, supplier: Supplier): CostBreakdow
   // Total cost based on area
   const totalCost = subtotalPerM2 * specs.areaM2;
   
+  // Calculate formula adder amounts (fixed amounts)
+  const formulaAdderAmount = surfaceTreatmentCost + thicknessCost + holeSizeCost + 
+                             innerCopperCost + outerCopperCost;
+  
+  // Calculate formula adder percentages
+  const materialTypePercent = typeof materialTypes[specs.materialType]?.[supplier] === 'string' && 
+                              materialTypes[specs.materialType]?.[supplier].includes('%') 
+                              ? parseFloat(materialTypes[specs.materialType]?.[supplier].replace('%', '')) 
+                              : 0;
+  const smColorPercent = typeof smColors[specs.smColor]?.[supplier] === 'string' && 
+                        smColors[specs.smColor]?.[supplier].includes('%') 
+                        ? parseFloat(smColors[specs.smColor]?.[supplier].replace('%', '')) 
+                        : 0;
+  const lineSpacePercent = typeof lineSpace[specs.lineSpace]?.[supplier] === 'string' && 
+                          lineSpace[specs.lineSpace]?.[supplier].includes('%') 
+                          ? parseFloat(lineSpace[specs.lineSpace]?.[supplier].replace('%', '')) 
+                          : 0;
+  const vCutPercent = typeof vCut[specs.vCut]?.[supplier] === 'string' && 
+                     vCut[specs.vCut]?.[supplier].includes('%') 
+                     ? parseFloat(vCut[specs.vCut]?.[supplier].replace('%', '')) 
+                     : 0;
+  
+  const formulaAdderPercentage = materialTypePercent + smColorPercent + lineSpacePercent + vCutPercent;
+  
   return {
     basePrice,
     surfaceTreatment: surfaceTreatmentCost,
@@ -85,6 +114,10 @@ export function calculateCost(specs: PCBSpecs, supplier: Supplier): CostBreakdow
     vCut: vCutCost,
     subtotal: subtotalPerM2,
     totalPerM2: subtotalPerM2,
-    totalCost
+    totalCost,
+    formulaAdderAmount,
+    formulaAdderPercentage,
+    mstcStandardPricePerM2: subtotalPerM2,
+    currency: 'RMB'
   };
 }
