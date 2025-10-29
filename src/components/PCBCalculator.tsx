@@ -22,7 +22,8 @@ const PCBCalculator = () => {
     outerCopper: "1/1 oz",
     lineSpace: "4/4 mil",
     vCut: "无",
-    areaM2: 1.0
+    areaM2: 1.0,
+    quantity: 1
   });
 
   const updateSpec = <K extends keyof PCBSpecs>(key: K, value: PCBSpecs[K]) => {
@@ -148,6 +149,19 @@ const PCBCalculator = () => {
                       min={0.1}
                     />
                   </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="quantity">需求量 (pcs)</Label>
+                  <Input
+                    id="quantity"
+                    type="number"
+                    value={specs.quantity}
+                    onChange={(e) => updateSpec("quantity", parseInt(e.target.value) || 1)}
+                    className="text-center"
+                    step={1}
+                    min={1}
+                  />
                 </div>
               </CardContent>
             </Card>

@@ -28,9 +28,14 @@ const SupplierComparison = ({ specs }: SupplierComparisonProps) => {
       <CardHeader className="bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5">
         <CardTitle className="flex items-center justify-between">
           <span>供應商報價比較</span>
-          <Badge variant="outline" className="bg-card">
-            總面積: {specs.areaM2.toFixed(2)} m²
-          </Badge>
+          <div className="flex gap-2">
+            <Badge variant="outline" className="bg-card">
+              總面積: {specs.areaM2.toFixed(4)} m²
+            </Badge>
+            <Badge variant="outline" className="bg-card">
+              需求量: {specs.quantity} pcs
+            </Badge>
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-6">

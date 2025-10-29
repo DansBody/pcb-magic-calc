@@ -120,4 +120,5 @@ export interface PCBSpecs {
   lineSpace: keyof typeof lineSpace;
   vCut: keyof typeof vCut;
   areaM2: number;
+  quantity: number;
 }

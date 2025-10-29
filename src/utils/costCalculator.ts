@@ -74,8 +74,8 @@ export function calculateCost(specs: PCBSpecs, supplier: Supplier): CostBreakdow
                         thicknessCost + holeSizeCost + smColorCost + 
                         innerCopperCost + outerCopperCost + lineSpaceCost + vCutCost;
   
-  // Total cost based on area
-  const totalCost = subtotalPerM2 * specs.areaM2;
+  // Total cost based on area and quantity
+  const totalCost = subtotalPerM2 * specs.areaM2 * specs.quantity;
   
   // Calculate formula adder amounts (fixed amounts)
   const formulaAdderAmount = surfaceTreatmentCost + thicknessCost + holeSizeCost + 
