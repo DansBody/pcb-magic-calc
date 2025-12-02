@@ -4,7 +4,8 @@ import { calculateCost } from "@/utils/costCalculator";
 import { useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Cell } from "recharts";
-import { PieChart } from "lucide-react";
+import { PieChart, ChevronDown, Calculator, Percent } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface CostBreakdownProps {
   specs: PCBSpecs;
@@ -118,6 +119,121 @@ const CostBreakdown = ({ specs }: CostBreakdownProps) => {
                   </span>
                 </div>
               ))}
+            </div>
+
+            {/* 公式加價詳細分解 */}
+            <div className="pt-4">
+              <Accordion type="multiple" className="w-full">
+                <AccordionItem value="formula-amount">
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-2">
+                      <Calculator className="h-4 w-4 text-accent" />
+                      <span className="font-medium">公式加價金額詳細分解</span>
+                      <span className="text-sm text-muted-foreground ml-2">
+                        (¥{cost.formulaAdderAmount.toFixed(2)})
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-2 pt-2">
+                      {cost.formulaAdderBreakdown.length > 0 ? (
+                        cost.formulaAdderBreakdown.map((item, index) => (
+                          <div key={index} className="flex items-center justify-between py-2 px-3 rounded-md bg-muted/30">
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm text-foreground">{item.name}</span>
+                              {item.percentage > 0 && (
+                                <span className="text-xs text-muted-foreground">
+                                  ({item.percentage.toFixed(1)}%)
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-sm font-medium text-foreground">
+                              ¥{item.amount.toFixed(2)}
+                            </span>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="text-sm text-muted-foreground text-center py-4">
+                          無公式加價項目
+                        </div>
+                      )}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                {/* 公式加價百分比詳細分解 */}
+                <AccordionItem value="formula-percentage">
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-2">
+                      <Percent className="h-4 w-4 text-accent" />
+                      <span className="font-medium">公式加價百分比詳細分解</span>
+                      <span className="text-sm text-muted-foreground ml-2">
+                        ({cost.formulaAdderPercentage.toFixed(1)}%)
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-2 pt-2">
+                      {cost.formulaPercentageBreakdown.length > 0 ? (
+                        cost.formulaPercentageBreakdown.map((item, index) => (
+                          <div key={index} className="flex items-center justify-between py-2 px-3 rounded-md bg-muted/30">
+                            <span className="text-sm text-foreground">{item.name}</span>
+                            <span className="text-sm font-medium text-foreground">
+                              {item.percentage.toFixed(1)}%
+                            </span>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="text-sm text-muted-foreground text-center py-4">
+                          無百分比加價項目
+                        </div>
+                      )}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                {/* MSTC 标准平米价详细分解 */}
+                <AccordionItem value="mstc-breakdown">
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-2">
+                      <Percent className="h-4 w-4 text-accent" />
+                      <span className="font-medium">MSTC 标准平米价详细分解</span>
+                      <span className="text-sm text-muted-foreground ml-2">
+                        (¥{cost.mstcStandardPricePerM2.toFixed(2)})
+                      </span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-2 pt-2">
+                      {cost.mstcStandardPriceBreakdown.length > 0 ? (
+                        cost.mstcStandardPriceBreakdown.map((item, index) => (
+                          <div key={index} className="flex items-center justify-between py-2 px-3 rounded-md bg-muted/30">
+                            <div className="flex items-center gap-2">
+                              <span className="text-sm text-foreground">{item.name}</span>
+                              {item.type === 'percent' && item.percent !== undefined && (
+                                <span className="text-xs text-muted-foreground">
+                                  ({item.percent.toFixed(1)}%)
+                                </span>
+                              )}
+                              {item.type === 'fixed' && (
+                                <span className="text-xs text-muted-foreground">(定值)</span>
+                              )}
+                              {item.type === 'base' && (
+                                <span className="text-xs text-muted-foreground">(基礎單價)</span>
+                              )}
+                            </div>
+                            <span className="text-sm font-medium text-foreground">
+                              ¥{item.amount.toFixed(2)}
+                            </span>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="text-sm text-muted-foreground text-center py-4">
+                          無 MSTC 標準平米價加項
+                        </div>
+                      )}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </div>

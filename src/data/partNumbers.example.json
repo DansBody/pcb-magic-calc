@@ -1,0 +1,31 @@
+{
+  "partNumbers": [
+    {
+      "id": "part-1",
+      "partNumber": "PCB-001-001",
+      "unitPrice": 125.50,
+      "currency": "RMB",
+      "description": "4層板，OSP表面處理",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "part-2",
+      "partNumber": "PCB-002-001",
+      "unitPrice": 85.30,
+      "currency": "RMB",
+      "description": "2層板，HASL表面處理",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "part-3",
+      "partNumber": "PCB-003-001",
+      "unitPrice": 350.00,
+      "currency": "USD",
+      "description": "6層板，ENIG表面處理",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}
