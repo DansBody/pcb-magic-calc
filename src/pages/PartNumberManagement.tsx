@@ -337,9 +337,8 @@ const PartNumberManagement = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Part Number 管理
+                  Part Number
                 </h1>
-                <p className="text-sm text-muted-foreground">維護 Part Number 及單價資料</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

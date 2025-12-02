@@ -84,7 +84,6 @@ const PCBCalculator = () => {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   PCB Cost Calculator
                 </h1>
-                <p className="text-sm text-muted-foreground">PCB Cost Compare between different suppliers</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
