@@ -1,31 +1,481 @@
 {
   "partNumbers": [
     {
-      "id": "part-1",
-      "partNumber": "PCB-001-001",
-      "unitPrice": 125.50,
-      "currency": "RMB",
-      "description": "4層板，OSP表面處理",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z"
+      "partNumber": "45-040-000121Z-A0TR",
+      "unitPrice": 10.327,
+      "description": "",
+      "id": "part-1762147535240-n2s8q8gcy",
+      "createdAt": "2025-11-03T05:25:35.240Z",
+      "updatedAt": "2025-11-03T05:25:35.240Z",
+      "currency": "RMB"
     },
     {
-      "id": "part-2",
-      "partNumber": "PCB-002-001",
-      "unitPrice": 85.30,
-      "currency": "RMB",
-      "description": "2層板，HASL表面處理",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z"
-    },
-    {
-      "id": "part-3",
-      "partNumber": "PCB-003-001",
-      "unitPrice": 350.00,
+      "partNumber": "45-040-000121Z-A0TR-1",
+      "unitPrice": 1.835,
       "currency": "USD",
-      "description": "6層板，ENIG表面處理",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z"
+      "description": "",
+      "id": "part-1762162152822-5y8bbmvps",
+      "createdAt": "2025-11-03T09:29:12.822Z",
+      "updatedAt": "2025-11-03T09:29:12.822Z"
+    },
+    {
+      "partNumber": "45-403-000991A0T-1",
+      "unitPrice": 6.433,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162180956-utayyl0d1",
+      "createdAt": "2025-11-03T09:29:40.956Z",
+      "updatedAt": "2025-11-03T09:29:40.956Z"
+    },
+    {
+      "partNumber": "45-040-000120Z-A0TR",
+      "unitPrice": 5.067,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162194142-m3xw4uxf1",
+      "createdAt": "2025-11-03T09:29:54.142Z",
+      "updatedAt": "2025-11-03T09:29:54.142Z"
+    },
+    {
+      "partNumber": "45-040-000215Z-A0TR",
+      "unitPrice": 6.28,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162204474-or26a3n9w",
+      "createdAt": "2025-11-03T09:30:04.474Z",
+      "updatedAt": "2025-11-03T09:30:04.474Z"
+    },
+    {
+      "partNumber": "45-040-000236Z-A0TR",
+      "unitPrice": 12.577,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162216832-97fzkdc08",
+      "createdAt": "2025-11-03T09:30:16.832Z",
+      "updatedAt": "2025-11-03T09:30:16.832Z"
+    },
+    {
+      "partNumber": "45-040-000239Z-A0TR",
+      "unitPrice": 7.707,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162902378-3decfjgyl",
+      "createdAt": "2025-11-03T09:41:42.378Z",
+      "updatedAt": "2025-11-03T09:41:42.378Z"
+    },
+    {
+      "partNumber": "45-040-000276Z-ACTR",
+      "unitPrice": 9.704,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162912224-04pxkfbow",
+      "createdAt": "2025-11-03T09:41:52.224Z",
+      "updatedAt": "2025-11-03T09:41:52.224Z"
+    },
+    {
+      "partNumber": "45-060-000046Z-A0TR",
+      "unitPrice": 19.706,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162922411-ef3b9dcy2",
+      "createdAt": "2025-11-03T09:42:02.411Z",
+      "updatedAt": "2025-11-03T09:42:02.411Z"
+    },
+    {
+      "partNumber": "45-060-000079Z-A0TR-1",
+      "unitPrice": 13.337,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162934380-c54b6rp17",
+      "createdAt": "2025-11-03T09:42:14.380Z",
+      "updatedAt": "2025-11-03T09:42:14.380Z"
+    },
+    {
+      "partNumber": "45-060-000082Z-A0TR",
+      "unitPrice": 18.995,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-1762162950976-mp2lngf5s",
+      "createdAt": "2025-11-03T09:42:30.976Z",
+      "updatedAt": "2025-11-03T09:42:30.976Z"
+    },
+    {
+      "partNumber": "45-060-000117Z-ACTR",
+      "unitPrice": 23.509,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000117Z-ACTR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-403-000809A0T",
+      "unitPrice": 5.922,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-403-000809A0T",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-403-000993A0T",
+      "unitPrice": 5.4,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-403-000993A0T",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-020-000089Z-ABTR",
+      "unitPrice": 0.121,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-020-000089Z-ABTR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000264Z-ACTR",
+      "unitPrice": 0.773,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-040-000264Z-ACTR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000231Z-A0TR",
+      "unitPrice": 4.95,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000231Z-A0TR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000332Z-ACTR",
+      "unitPrice": 12.691,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000332Z-ACTR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000344Z-ACTR",
+      "unitPrice": 6.053,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000344Z-ACTR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000345Z-A0TR",
+      "unitPrice": 13.999,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000345Z-A0TR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000036Z-A0TR",
+      "unitPrice": 17.252,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000036Z-A0TR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000090Z-AETR",
+      "unitPrice": 25.764,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000090Z-AETR",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-020-000051Z-A1TE",
+      "unitPrice": 2.78,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-020-000051Z-A1TE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000057Z-B0TE",
+      "unitPrice": 22.1,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000057Z-B0TE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-020-000085Z-A0TE",
+      "unitPrice": 2.616,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-020-000085Z-A0TE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000101Z-B0TE",
+      "unitPrice": 6.75,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000101Z-B0TE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000133Z-A0EL",
+      "unitPrice": 1.98,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-040-000133Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000173Z-A0EL-1",
+      "unitPrice": 1.975,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-040-000173Z-A0EL-1",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000097Z-A0EL",
+      "unitPrice": 2.23,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-060-000097Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000145Z-B0EL",
+      "unitPrice": 1.47,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-040-000145Z-B0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000133Z-A0EL",
+      "unitPrice": 14.5,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000133Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000146Z-A0EL",
+      "unitPrice": 12.1,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000146Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000154Z-A0EL-1",
+      "unitPrice": 20.63,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000154Z-A0EL-1",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000169Z-A0EL",
+      "unitPrice": 10.43,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000169Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000254Z-A0EL-1",
+      "unitPrice": 12.02,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000254Z-A0EL-1",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000097Z-A0EL",
+      "unitPrice": 15.83,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000097Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000145Z-B0EL",
+      "unitPrice": 10.61,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000145Z-B0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000133Z-A0EL-1",
+      "unitPrice": 13.53,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000133Z-A0EL-1",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000153Z-A0EL",
+      "unitPrice": 16.0,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000153Z-A0EL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000298Z-ABEL",
+      "unitPrice": 16.77,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000298Z-ABEL",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000038Z-B0EE",
+      "unitPrice": 1.863,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-040-000038Z-B0EE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-601-000928A1K",
+      "unitPrice": 2.917,
+      "currency": "USD",
+      "description": "",
+      "id": "part-auto-45-601-000928A1K",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000150Z-A0EE",
+      "unitPrice": 10.55,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000150Z-A0EE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000010Z-A1EE",
+      "unitPrice": 23.951,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000010Z-A1EE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-060-000091Z-A0EE-1",
+      "unitPrice": 14.18,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-060-000091Z-A0EE-1",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-403-000570A0K-1",
+      "unitPrice": 9.858,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-403-000570A0K-1",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-403-000975A0K",
+      "unitPrice": 9.6,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-403-000975A0K",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-403-000975A1K",
+      "unitPrice": 9.6,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-403-000975A1K",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-601-000928A1K",
+      "unitPrice": 20.14,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-601-000928A1K",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-601-000931B0K",
+      "unitPrice": 20.534,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-601-000931B0K",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000048Z-A0EE",
+      "unitPrice": 16.1,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000048Z-A0EE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-040-000119Z-B0EE",
+      "unitPrice": 7.602,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-040-000119Z-B0EE",
+      "createdAt": "",
+      "updatedAt": ""
+    },
+    {
+      "partNumber": "45-403-000978A1K",
+      "unitPrice": 3.964,
+      "currency": "RMB",
+      "description": "",
+      "id": "part-auto-45-403-000978A1K",
+      "createdAt": "",
+      "updatedAt": ""
     }
   ]
 }

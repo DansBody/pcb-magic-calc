@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Plus, Pencil, Trash2, Download, Upload, Search, Package, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   Table,
@@ -44,6 +45,7 @@ import {
 } from "@/utils/partNumberStorage";
 import type { PartNumber } from "@/types/partNumber";
 import type { Currency } from "@/types/partNumber";
+import exampleData from "@/data/partNumbers.example.json";
 
 const PartNumberManagement = () => {
   const [partNumbers, setPartNumbers] = useState<PartNumber[]>([]);
@@ -297,6 +299,32 @@ const PartNumberManagement = () => {
     input.click();
   };
 
+  // 下載範例資料
+  const handleDownloadExample = () => {
+    try {
+      const jsonString = JSON.stringify(exampleData, null, 2);
+      const blob = new Blob([jsonString], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "partNumbers.example.json";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      toast({
+        title: "下載成功",
+        description: "範例資料已下載",
+      });
+    } catch (error) {
+      toast({
+        title: "下載失敗",
+        description: error instanceof Error ? error.message : "未知錯誤",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
       {/* Header */}
@@ -314,12 +342,15 @@ const PartNumberManagement = () => {
                 <p className="text-sm text-muted-foreground">維護 Part Number 及單價資料</p>
               </div>
             </div>
-            <Link to="/">
-              <Button variant="outline">
-                <Calculator className="h-4 w-4 mr-2" />
-                成本計算器
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <Link to="/">
+                <Button variant="outline">
+                  <Calculator className="h-4 w-4 mr-2" />
+                  成本計算器
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -347,6 +378,10 @@ const PartNumberManagement = () => {
                 <Button onClick={handleImport} variant="outline">
                   <Upload className="h-4 w-4 mr-2" />
                   匯入 JSON
+                </Button>
+                <Button onClick={handleDownloadExample} variant="outline">
+                  <Download className="h-4 w-4 mr-2" />
+                  下載範例資料
                 </Button>
               </div>
             </div>

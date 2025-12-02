@@ -15,6 +15,7 @@ import { calculateCost } from "@/utils/costCalculator";
 import CostBreakdown from "./CostBreakdown";
 import SupplierComparison from "./SupplierComparison";
 import { getPartNumbers } from "@/utils/partNumberStorage";
+import { ThemeToggle } from "./ThemeToggle";
 
 const PCBCalculator = () => {
   const vCutDefault = Object.keys(vCut)[0];
@@ -86,12 +87,15 @@ const PCBCalculator = () => {
                 <p className="text-sm text-muted-foreground">PCB Cost Compare between different suppliers</p>
               </div>
             </div>
-            <Link to="/part-numbers">
-              <Button variant="outline">
-                <Package className="h-4 w-4 mr-2" />
-                Part Number 管理
-              </Button>
-            </Link>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <Link to="/part-numbers">
+                <Button variant="outline">
+                  <Package className="h-4 w-4 mr-2" />
+                  Part Number 管理
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
